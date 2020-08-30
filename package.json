@@ -1,0 +1,27 @@
+{
+	"name": "dicoding-submmision",
+	"version": "1.0.0",
+	"description": "Just for finish the assigment to me",
+	"main": "index.js",
+	"scripts": {
+		"test": "",
+		"dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+	},
+	"keywords": [
+		"dicoding",
+		"learn"
+	],
+	"author": "Abdul Aziz Al Basyir",
+	"license": "GPL-3.0",
+	"devDependencies": {
+		"babel-loader": "^8.1.0",
+		"http-server": "^0.12.3",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0"
+	},
+	"dependencies": {
+		"@babel/core": "^7.11.1",
+		"axios": "^0.20.0"
+	}
+}
