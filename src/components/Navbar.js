@@ -1,4 +1,4 @@
-import { Component } from "../helpers";
+import { Component } from "../helpers/index.js";
 
 class Navbar extends Component {
 	created() {

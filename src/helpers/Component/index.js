@@ -1,4 +1,4 @@
-import Element from "./Element";
+import Element from "./Element.js";
 
 class Component extends Element {
 	constructor() {

@@ -1,3 +1,3 @@
-import "./Navbar";
-import "./Summary";
-import "./Province";
+import "./Navbar.js";
+import "./Summary.js";
+import "./Province.js";

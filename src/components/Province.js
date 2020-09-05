@@ -1,4 +1,4 @@
-import { Component } from "../helpers";
+import { Component } from "../helpers/index.js";
 import Axios from "axios";
 
 class Province extends Component {
