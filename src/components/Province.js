@@ -2,32 +2,32 @@ import { Component } from "../helpers/index.js";
 import Axios from "axios";
 
 class Province extends Component {
-	created() {
-		this.dataEachProvince;
+  created() {
+    this.dataEachProvince;
 
-		this.getSummary();
-	}
+    this.getSummary();
+  }
 
-	getSummary() {
-		Axios.get("//indonesia-covid-19.mathdro.id/api/provinsi")
-			.then((res) => res.data)
-			.then((data) => {
-				this.dataEachProvince = data.data;
-				this.rendering(); // render ulang
-			});
-	}
+  getSummary() {
+    Axios.get("//indonesia-covid-19.mathdro.id/api/provinsi")
+      .then((res) => res.data)
+      .then((data) => {
+        this.dataEachProvince = data.data;
+        this.rendering(); // render ulang
+      });
+  }
 
-	render() {
-		if (this.dataEachProvince)
-			return `
+  render() {
+    if (this.dataEachProvince)
+      return `
       <div class='container py-3'>
         <span class='h1'>Province</span>
       </div>
       <div class='container'>
         <div class="row">
         ${this.dataEachProvince
-					.map(
-						(data) => `
+          .map(
+            (data) => `
             <div class="col-sm-4 p-1">
               <div class="shadow card text-center">
                 <div class="card-body">
@@ -43,12 +43,12 @@ class Province extends Component {
               </div>
             </div>
             `
-					)
-					.join("")}
+          )
+          .join("")}
         </div>
       </div>
     `;
-	}
+  }
 }
 
-Component.register(Province);
+customElements.define("x-province", Province);

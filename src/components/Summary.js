@@ -2,24 +2,24 @@ import { Component } from "../helpers/index.js";
 import Axios from "axios";
 
 class Summary extends Component {
-	created() {
-		this.summaries;
+  created() {
+    this.summaries;
 
-		this.getSummary();
-	}
+    this.getSummary();
+  }
 
-	getSummary() {
-		Axios.get("//indonesia-covid-19.mathdro.id/api")
-			.then((res) => res.data)
-			.then((data) => {
-				this.summaries = data;
-				this.rendering(); // render ulang
-			});
-	}
+  getSummary() {
+    Axios.get("//indonesia-covid-19.mathdro.id/api")
+      .then((res) => res.data)
+      .then((data) => {
+        this.summaries = data;
+        this.rendering(); // render ulang
+      });
+  }
 
-	render() {
-		if (this.summaries)
-			return `
+  render() {
+    if (this.summaries)
+      return `
       <div class='container py-3'>
         <span class='h1'>Sumarry</span>
       </div>
@@ -52,7 +52,7 @@ class Summary extends Component {
         </div>
       </div>
     `;
-	}
+  }
 }
 
-Component.register(Summary);
+customElements.define("x-summary", Summary);
